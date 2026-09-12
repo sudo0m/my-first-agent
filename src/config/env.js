@@ -32,3 +32,4 @@ const env = { ...loadEnv(), ...process.env };
 export const baseUrl = env.BASE_URL || 'http://localhost:20128/v1';
 export const apiKey = env.BASE_KEY || 'sk-local-demo';
 export const model = env.MODEL || 'my-combo';
+export const ssePort = env.SSE_PORT ? Number(env.SSE_PORT) : null;

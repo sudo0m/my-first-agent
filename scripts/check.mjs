@@ -17,6 +17,8 @@ const filesToCheck = [
     'src/infrastructure/workspace/workspace.js',
     'src/memory/index.js',
     'src/planner/index.js',
+    'src/stream/index.js',
+    'src/stream/sseClient.js',
     'src/capabilities/tools/index.js',
     'src/capabilities/tools/clock.js',
     'src/capabilities/tools/fs/listDir.js',

@@ -1,4 +1,4 @@
-import { createPlan } from '../domain/plan.js';
+import { buildStepPrompt, createPlan, getNextPendingStep, hasPendingSteps, markStepCompleted, markStepInProgress } from '../domain/plan.js';
 
 function splitGoalIntoSteps(goal) {
     const fragments = goal
@@ -27,6 +27,21 @@ export function createPlanner() {
         },
         createPlan(goal) {
             return createPlan(goal, splitGoalIntoSteps(goal));
+        },
+        getNextStep(plan) {
+            return getNextPendingStep(plan);
+        },
+        beginStep(plan, stepId) {
+            return markStepInProgress(plan, stepId);
+        },
+        finishStep(plan, stepId) {
+            return markStepCompleted(plan, stepId);
+        },
+        hasPendingSteps(plan) {
+            return hasPendingSteps(plan);
+        },
+        buildStepPrompt(plan, step) {
+            return buildStepPrompt(plan, step);
         }
     };
 }

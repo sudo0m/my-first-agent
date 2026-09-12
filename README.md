@@ -9,6 +9,7 @@
 - `src/domain`：核心数据结构
 - `src/memory`：文件化记忆
 - `src/planner`：任务规划
+- `src/stream`：SSE 事件流
 - `src/capabilities`：具体能力/工具
 - `src/infrastructure`：外部交互实现
 - `src/shared`：通用工具
@@ -35,3 +36,4 @@ npm run smoke
 - `BASE_URL`
 - `BASE_KEY`
 - `MODEL`
+- `SSE_PORT`（可选，开启 SSE 事件流服务）
